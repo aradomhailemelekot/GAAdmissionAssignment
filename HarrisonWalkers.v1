@@ -1,0 +1,127 @@
+//*  https://dash.generalassemb.ly/Aradom/build-your-own-business-website *\\
+
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+}
+div {
+  width: cover;
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 20px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Inconsolata', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("https://i.imgur.com/7LgUlA2.jpg");
+}
+.second{
+  background-image: url(https://i.imgur.com/thBFcxW.jpg);
+}
+.dessert{
+  background-image: url(https://i.imgur.com/pSz2xO8.jpg);
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Harrison Walkers</h1>
+<h2>Your Friendly Neighboorhood Dog Walkers</h2>
+<div class="first">
+  <p>15 Minute Walk <span class="price">$10</span><br />
+  <small>Our most popular package! Great opportunity to get our furry friends out the house for some fresh air and reprieve. </small></p>
+</div>
+
+<div class="second">
+  <p>30 Minute Walk <span class="price">$15</span><br />
+  <small>Perfect walk for any dog, giving them time to relieve themselves as well as get some exercise and expend energy. </small></p>
+</div>
+  
+<div class="dessert">
+  <p>45 Minute Walk <span class="price">$20</span><br />
+  <small>Big walk for a big dog! Also for active breeds, hounds, boxers or puppies; all who have an excess amount energy to burn .</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
